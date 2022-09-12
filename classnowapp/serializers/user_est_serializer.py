@@ -33,3 +33,5 @@ class User_est_serializer(serializers.ModelSerializer):
                 'isActive': account.isActive
             }
         }
+
+#Carlos Lopez
