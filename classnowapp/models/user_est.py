@@ -3,19 +3,19 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 
 class UserManager(BaseUserManager):
-    def create_user(self, username_est, password=None):
+    def create_user(self, username, password=None):
         
-        if not username_est:
+        if not username:
             raise ValueError("User must have an username.")
         
-        user = self.model(username_est=username_est)
+        user = self.model(username=username)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, username_est, password):
+    def create_superuser(self, username, password):
         user = self.create_user(
-            username_est = username_est,
+            username = username,
             password = password
         )
         user.is_admin = True
@@ -24,7 +24,7 @@ class UserManager(BaseUserManager):
 
 class User_est(AbstractBaseUser, PermissionsMixin):
     id = models.BigAutoField(primary_key=True)
-    username_est = models.CharField('Username_est', max_length=15, unique=True)
+    username_est = models.CharField('Username', max_length=15, unique=True)
     nombres = models.CharField('Nombres', max_length=20)
     apellidos = models.CharField('Apellidos', max_length=20)
     email = models.EmailField('Email', max_length=30)
@@ -36,7 +36,7 @@ class User_est(AbstractBaseUser, PermissionsMixin):
     rol_usuario = models.CharField('Rol Usuario', max_length=20)
 
     def save(self, **kwargs):
-        some_salt = 'htrpqwxan'
+        some_salt = 'a2sp16wxv139ñlj487khc24'
         self.password = make_password(self.password, some_salt)
         super().save(**kwargs)
 

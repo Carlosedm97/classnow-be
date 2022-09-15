@@ -7,7 +7,7 @@ class User_est_serializer(serializers.ModelSerializer):
 
     class Meta:
         model = User_est
-        fields = ['id', 'username_est', 'nombres', 'apellidos', 'email', 'celular', 'edad', 'ciudad', 'genero', 'password', 'rol_usuario']
+        fields = ['id', 'username_est', 'nombres', 'apellidos', 'email', 'celular', 'edad', 'ciudad', 'genero', 'password', 'rol_usuario', 'account']
 
     def create(self, validated_data):
         accountData = validated_data.pop('account')
