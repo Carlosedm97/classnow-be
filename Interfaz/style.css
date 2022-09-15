@@ -22,7 +22,6 @@ body {
     position: absolute;
     background: -webkit-linear-gradient(to left, transparent, var(--main-color));  /* Chrome 10-25, Safari 5.1-6 */
     background-image: linear-gradient(to left, transparent, var(--main-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
