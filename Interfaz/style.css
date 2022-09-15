@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root {
+    --main-color: #16a085;
+    --main-color-tras: rgba(22, 160, 133, 0.5);
+  }
+  
+
+body {
+    background-image: url(Recursos/Fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.degrade {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background: -webkit-linear-gradient(to left, transparent, var(--main-color));  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to left, transparent, var(--main-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header {
+    width: 100%;
+    background-color: pink;
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+}
+article {
+    width: 50%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 50%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
