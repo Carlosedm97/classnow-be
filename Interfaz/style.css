@@ -40,7 +40,7 @@ body a{
     background-image: linear-gradient(to left, transparent, var(--main-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-content: center;
 }
 
 header {
@@ -54,11 +54,12 @@ header {
 
 article {
     width: 50%;
+    max-height: 85vh;
     padding: 25px;
     box-sizing: border-box;
-    background-color: red;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 article h1 {
@@ -70,8 +71,11 @@ article label {
 
 }
 
-article input {
-
+article input, article select {
+    width: 40%;
+    padding: 10px;
+    border:1px solid #000;
+    border-radius: 20px;
 }
 
 section {
