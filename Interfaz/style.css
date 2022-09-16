@@ -68,14 +68,15 @@ article h1 {
 }
 
 article label {
-
+    width: 40%;
 }
 
 article input, article select {
     width: 40%;
-    padding: 10px;
+    padding: 8px;
     border:1px solid #000;
-    border-radius: 20px;
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 section {
