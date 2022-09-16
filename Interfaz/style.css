@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: Shapiro;
+    src: url(https://dl.dropbox.com/s/yrofnl512d28sx9/Shapiro.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +14,8 @@
 :root {
     --main-color: #16a085;
     --main-color-tras: rgba(22, 160, 133, 0.5);
+    --font-letra: 'Source Sans Pro', sans-serif;
+    --font-titulos: 'Shapiro';
   }
   
 
@@ -14,6 +23,8 @@ body {
     background-image: url(Recursos/Fondo.jpg);
     background-size: cover;
     background-attachment: fixed;
+    font-family: var(--font-letra);
+    font-size: 16px;
 }
 
 body a{
@@ -30,29 +41,58 @@ body a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
 }
 
 header {
     width: 100%;
-    background-color: pink;
     padding: 20px;
     display: flex;
     justify-content: right;
+    font-weight: bold;
+    font-size: 18px;
 }
+
 article {
     width: 50%;
+    padding: 25px;
+    box-sizing: border-box;
     background-color: red;
     display: flex;
     flex-direction: column;
 }
 
+article h1 {
+    padding: 10px;
+    font-family: var(--font-titulos);
+}
+
+article label {
+
+}
+
+article input {
+
+}
+
 section {
     width: 50%;
-    background-color: blue;
+    padding-right: 25px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+section span {
+    font-size: 100px;
+    font-family: var(--font-titulos);
+    line-height: 80px;
+}
+
+section .texto {
+    text-align: right;
 }
 
 
