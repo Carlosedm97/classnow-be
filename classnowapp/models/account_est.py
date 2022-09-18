@@ -1,5 +1,6 @@
 from django.db import models
 from .user_est import User_est
+from .profesores import Profesores
 
 class Account_est(models.Model):
     id = models.AutoField(primary_key=True)

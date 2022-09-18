@@ -45,4 +45,6 @@ class Migration(migrations.Migration):
                 ('username_est', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='account', to=settings.AUTH_USER_MODEL)),
             ],
         ),
+    
+        
     ]
