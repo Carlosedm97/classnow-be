@@ -53,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 AUTH_USER_MODEL = 'classnowapp.User_est'
+AUTH_PROFESORES_MODEL = 'classnowapp.Profesores'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
