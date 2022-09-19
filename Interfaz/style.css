@@ -72,11 +72,10 @@ header {
 .login form {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    gap: 10px;
 }
 
 .login label {
-    padding: 10px;
     font-size: 18px;
 }
 
@@ -87,8 +86,40 @@ header {
     background-color: transparent;
 }
 
+.login p {
+    padding: 10px;
+}
+
 button {
+    border:1px solid #000;
+    border-radius: 10px;
+    background-color: transparent;
     padding: 10px 50px;
+    text-transform: uppercase;
+}
+
+.log-in:hover {
+    background-color: var(--main-color);
+}
+
+.otros {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.otros button {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.facebook {
+    background-color: blue;
+}
+
+.gmail {
+    background-color: #fff;
 }
 
 /*Info derecha*/
