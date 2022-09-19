@@ -45,15 +45,20 @@ body a{
 
 header {
     width: 100%;
-    padding: 20px;
+    box-sizing: border-box;
+    padding: 25px;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: right;
     font-weight: bold;
     font-size: 18px;
 }
 
-article {
+/*Login izquierdas*/
+.login {
     width: 50%;
+    background-color:pink; 
     max-height: 85vh;
     padding: 25px;
     box-sizing: border-box;
@@ -62,24 +67,27 @@ article {
     overflow-y: auto;
 }
 
-article h1 {
+.login h1 {
     padding: 10px;
+    font-size: 25px;
     font-family: var(--font-titulos);
 }
 
-article label {
+.login label {
     width: 40%;
 }
 
-article input, article select {
+.login input, .login select {
     width: 40%;
+    display: inline;
     padding: 8px;
     border:1px solid #000;
     border-radius: 10px;
     background-color: transparent;
 }
 
-section {
+/*Info derecha*/
+.info {
     width: 50%;
     padding-right: 25px;
     box-sizing: border-box;
@@ -90,13 +98,13 @@ section {
     gap: 10px;
 }
 
-section span {
+.info span {
     font-size: 100px;
     font-family: var(--font-titulos);
     line-height: 80px;
 }
 
-section .texto {
+.info .texto {
     text-align: right;
 }
 
