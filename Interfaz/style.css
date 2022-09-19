@@ -55,35 +55,40 @@ header {
     font-size: 18px;
 }
 
-/*Login izquierdas*/
+/*Login izquierdo*/
 .login {
     width: 50%;
-    background-color:pink; 
     max-height: 85vh;
-    padding: 25px;
+    padding: 25px 50px;
     box-sizing: border-box;
+}
+
+.login h1 {
+    padding: 10px;
+    font-size: 26px;
+    font-family: var(--font-titulos);
+}
+
+.login form {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
 }
 
-.login h1 {
-    padding: 10px;
-    font-size: 25px;
-    font-family: var(--font-titulos);
-}
-
 .login label {
-    width: 40%;
+    padding: 10px;
+    font-size: 18px;
 }
 
-.login input, .login select {
-    width: 40%;
-    display: inline;
-    padding: 8px;
+.login input {
+    padding: 10px;
     border:1px solid #000;
     border-radius: 10px;
     background-color: transparent;
+}
+
+button {
+    padding: 10px 50px;
 }
 
 /*Info derecha*/
