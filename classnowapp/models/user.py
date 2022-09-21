@@ -1,4 +1,5 @@
 from django.db import models
+from .roles import Roles
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 
@@ -24,16 +25,16 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     id = models.BigAutoField(primary_key=True)
-    username = models.CharField('Username', max_length=15, unique=True)
+    username = models.CharField('Username', max_length=20, unique=True)
     nombres = models.CharField('Nombres', max_length=20)
     apellidos = models.CharField('Apellidos', max_length=20)
     email = models.EmailField('Email', max_length=30)
-    celular = models.CharField('Celular', max_length=30)
-    edad = models.CharField('Edad', max_length=10)
-    ciudad = models.CharField('Ciudad', max_length=20)
-    genero = models.CharField('Genero', max_length=5)
+    celular = models.IntegerField('Celular', max_length=15)
+    edad = models.IntegerField('Edad', max_length=3)
+    ciudad = models.CharField('Ciudad', max_length=15)
+    genero = models.CharField('Genero', max_length=10)
     password = models.CharField('Contraseña', max_length=250)
-    rol_usuario = models.CharField('Rol Usuario', max_length=20)
+    roles = models.ForeignKey(Roles, related_name="roles", on_delete=models.CASCADE)
 
     def save(self, **kwargs):
         some_salt = 'a2sp16wxv139ñlj487khc24'
