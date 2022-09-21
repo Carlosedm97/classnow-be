@@ -6,7 +6,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'nombres', 'apellidos', 'email', 'celular', 'edad', 'ciudad', 'genero', 'password', 'rol_usuario']
+        fields = ['id', 'username', 'nombres', 'apellidos', 'email', 'celular', 'edad', 'ciudad', 'genero', 'password', 'roles']
 
     def create(self, validated_data):
         userInstance = User.objects.create(**validated_data)
@@ -24,5 +24,5 @@ class UserSerializer(serializers.ModelSerializer):
             'edad': user.edad,
             'ciudad': user.ciudad,
             'genero': user.genero,
-            'rol_usuario': user.rol_usuario,
+            'roles': user.roles,
         }
