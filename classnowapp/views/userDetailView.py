@@ -4,12 +4,12 @@ from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
-from classnowapp.models.user_est import User_est
-from classnowapp.serializers.user_est_serializer import User_est_serializer
+from classnowapp.models.user import User
+from classnowapp.serializers.userSerializer import UserSerializer
 
 class userDetailView(generics.RetrieveAPIView):
-    queryset = User_est.objects.all()
-    serializer_class = User_est_serializer
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):

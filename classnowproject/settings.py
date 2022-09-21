@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-AUTH_USER_MODEL = 'classnowapp.User_est'
+AUTH_USER_MODEL = 'classnowapp.User'
 AUTH_PROFESORES_MODEL = 'classnowapp.Profesores'
 
 REST_FRAMEWORK = {

@@ -22,9 +22,9 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-class User_est(AbstractBaseUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin):
     id = models.BigAutoField(primary_key=True)
-    username_est = models.CharField('Username', max_length=15, unique=True)
+    username = models.CharField('Username', max_length=15, unique=True)
     nombres = models.CharField('Nombres', max_length=20)
     apellidos = models.CharField('Apellidos', max_length=20)
     email = models.EmailField('Email', max_length=30)
@@ -41,4 +41,4 @@ class User_est(AbstractBaseUser, PermissionsMixin):
         super().save(**kwargs)
 
     objects = UserManager()
-    USERNAME_FIELD = 'username_est'
+    USERNAME_FIELD = 'username'

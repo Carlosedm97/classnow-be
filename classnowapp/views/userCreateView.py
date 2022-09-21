@@ -2,17 +2,17 @@ from rest_framework import status, views
 from rest_framework.response import Response
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from classnowapp.serializers.user_est_serializer import User_est_serializer
+from classnowapp.serializers.userSerializer import UserSerializer
 
 class userCreateView(views.APIView):
 
     def post(self, request, *args, **kwargs):
-        serializer = User_est_serializer(data=request.data)
+        serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
 
         tokenData = {
-            "username_est": request.data["username_est"],
+            "username": request.data["username"],
             "password": request.data["password"]
         }
 

@@ -1,20 +1,21 @@
 from rest_framework import serializers
-from classnowapp.models import Profesores
+from classnowapp.models import User
 
-class Prof_serializer(serializers.ModelSerializer):
+
+class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Profesores
-        fields = '__all__' #['id_profesores', 'username', 'nombres', 'apellidos', 'email', 'celular', 'edad', 'ciudad', 'genero', 'password', 'rol_usuario']
+        model = User
+        fields = ['id', 'username', 'nombres', 'apellidos', 'email', 'celular', 'edad', 'ciudad', 'genero', 'password', 'rol_usuario']
 
     def create(self, validated_data):
-        userInstance = Profesores.objects.create(**validated_data)
+        userInstance = User.objects.create(**validated_data)
         return userInstance
 
     def to_representation(self, obj):
-        user = Profesores.objects.get(id=obj.id)
+        user = User.objects.get(id=obj.id)
         return {
-            'id_profesores': user.id,
+            'id': user.id,
             'username': user.username,
             'nombres': user.nombres,
             'apellidos': user.apellidos,
