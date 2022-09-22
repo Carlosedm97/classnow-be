@@ -8,7 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'username', 'nombres', 'apellidos', 'email', 'celular', 'edad', 'ciudad', 'genero', 'password', 'roles']
 
-    def create(self, validated_data):
+    """def create(self, validated_data):
         userInstance = User.objects.create(**validated_data)
         return userInstance
 
@@ -25,4 +25,4 @@ class UserSerializer(serializers.ModelSerializer):
             'ciudad': user.ciudad,
             'genero': user.genero,
             'roles': user.roles,
-        }
+        }""" 
