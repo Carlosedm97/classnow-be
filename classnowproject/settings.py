@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'classnowapp',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "https://classnow-fe.herokuapp.com/",
+    "http://127.0.0.1:8000"
+]
+
+# CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL = 'classnowapp.User'
 AUTH_PROFESORES_MODEL = 'classnowapp.Profesores'
