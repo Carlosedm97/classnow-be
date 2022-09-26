@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "https://classnow-fe.herokuapp.com/",
+    "https://classnow-fe.herokuapp.com",
     "http://127.0.0.1:8000"
 ]
 
@@ -112,10 +112,10 @@ WSGI_APPLICATION = 'classnowproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbvp4afl021esv',
-        'USER': 'mmopfznljzsrtn',
-        'PASSWORD': 'd7a71a3328e80d305b452614e29ab68bed48665cf65a9f0ebc6f9cfae828ebf0',
-        'HOST': 'ec2-52-1-17-228.compute-1.amazonaws.com',
+        'NAME': 'da63cp75ii1lhu',
+        'USER': 'glcermxzkvoffm',
+        'PASSWORD': 'dfee7a3b59da96e5ee54796a73bc352d567e8299b74de2d8aa8f095475ceec03',
+        'HOST': 'ec2-54-91-223-99.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
