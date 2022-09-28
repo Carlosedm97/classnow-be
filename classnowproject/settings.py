@@ -56,14 +56,13 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "https://classnow-fe.herokuapp.com",
+    "https://class-nowapp-vue.herokuapp.com",
     "http://127.0.0.1:8000"
 ]
 
 # CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL = 'classnowapp.User'
-AUTH_PROFESORES_MODEL = 'classnowapp.Profesores'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
