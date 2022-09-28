@@ -5,4 +5,4 @@ from .models import Account
 
 admin.site.register(User)
 admin.site.register(Clases)
-admin.site.resgister(Account)
+admin.site.register(Account)
