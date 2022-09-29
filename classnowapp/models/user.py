@@ -30,9 +30,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     apellidos = models.CharField('Apellidos', max_length=20)
     email = models.EmailField('Email', max_length=30)
     celular = models.CharField('Celular', max_length=15)
-    edad = models.IntegerField('Edad')
-    ciudad = models.CharField('Ciudad', max_length=15)
-    genero = models.CharField('Genero', max_length=10)
     password = models.CharField('Contraseña', max_length=250)
     roles = models.ForeignKey(Roles, related_name="roles", on_delete=models.CASCADE)
 
