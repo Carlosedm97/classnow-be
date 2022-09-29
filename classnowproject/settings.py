@@ -111,10 +111,10 @@ WSGI_APPLICATION = 'classnowproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'da63cp75ii1lhu',
-        'USER': 'glcermxzkvoffm',
-        'PASSWORD': 'dfee7a3b59da96e5ee54796a73bc352d567e8299b74de2d8aa8f095475ceec03',
-        'HOST': 'ec2-54-91-223-99.compute-1.amazonaws.com',
+        'NAME': 'd57f4utg2g0fl6',
+        'USER': 'mjakkvrwxtdges',
+        'PASSWORD': '4e6ec5ce566851ca66fb73ee9919f46ddffaa87fb9d76e9a8a99b380192d3d60',
+        'HOST': 'ec2-52-200-5-135.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
