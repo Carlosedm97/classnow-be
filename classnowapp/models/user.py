@@ -1,7 +1,7 @@
 from django.db import models
-from .roles import Roles
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
+from .rol import Rol
 
 class UserManager(BaseUserManager):
     def create_user(self, username, password=None):
@@ -17,7 +17,7 @@ class UserManager(BaseUserManager):
     def create_superuser(self, username, password):
         user = self.create_user(
             username = username,
-            password = password
+            password = password,
         )
         user.is_admin = True
         user.save(using=self._db)
@@ -31,7 +31,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField('Email', max_length=30)
     celular = models.CharField('Celular', max_length=15)
     password = models.CharField('Contraseña', max_length=250)
-    roles = models.ForeignKey(Roles, related_name="roles", on_delete=models.CASCADE)
+    rol = models.ForeignKey(Rol, related_name='user', on_delete=models.CASCADE)
 
     def save(self, **kwargs):
         some_salt = 'a2sp16wxv139ñlj487khc24'
